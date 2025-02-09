@@ -34,7 +34,7 @@ export class MyCard extends LitElement {
       .button {
         display: none;
       }
-      .button {
+      .button button{
         background-color: white;
         color: navy;
         font-size: 38px;
@@ -84,10 +84,10 @@ export class MyCard extends LitElement {
       <h2>Mascots</h2>
       <div id="cardlist">
         <div class="card">
-          <img class="imagep" src= "https://bloximages.newyork1.vip.townnews.com/psucollegian.com/content/tncms/assets/v3/editorial/2/f4/2f47c8f0-6353-11ef-8b73-c343b44d169f/66cbe8cfd0547.image.jpg?resize=1396%2C929alt=" alt="Nittany Lion" width = "400">
+          <img class="imagep" src=${this.image} alt="Nittany Lion" width ="400" height ="300">
           <div class="card-text">
-            <h3 class ="card-title">Nittany Lion</h3>
-            <p>The Nittany Lion is the Penn State mascot. Click the button below to access HAX!</p>
+            <h3>${this.title}</h3>
+            <p class = "info">${this.info}</p>
           </div>
           <div class="button">
             <button onclick="document.location='https://hax.psu.edu'"> Details</button>
@@ -100,8 +100,11 @@ export class MyCard extends LitElement {
   static get properties() {
     return {
       title: { type: String },
+      image: { type: String },
+      info: { type: String },
     };
   }
 }
+
 
 globalThis.customElements.define(MyCard.tag, MyCard);
