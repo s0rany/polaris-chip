@@ -31,14 +31,60 @@
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
 
-  <h1>my-card</h1>
-  <my-card title ="The Nittany Lion" image="https://bloximages.newyork1.vip.townnews.com/psucollegian.com/content/tncms/assets/v3/editorial/2/f4/2f47c8f0-6353-11ef-8b73-c343b44d169f/66cbe8cfd0547.image.jpg?resize=1396%2C929alt="
-  info="The Nittany Lion is the Penn State mascot. Click the button below to access HAX!"></my-card>
-  <my-card title="Penn State Mascot" image="https://gopsusports.com/imgproxy/PqoLDEfzF4Bhu3sNNP3cicuVwByc83U54E5HV1WnWms/rs:fit:1980:0:0/g:ce/q:90/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL2dvcHN1c3BvcnRzLXByb2QvMjAyNC8wNS8xMy8yOFBCY2JzMG1LUVBHZGlmb21VYmt3aE1SS2d1MjlyTTg2NGV0WE52LmpwZw.jpg"
-  info="!XAH ssecca ot woleb nottub eht kcilC. tocsam etatS nneP eht si nioL ynattiN ehT"></my-card>
-  <my-card title="'The Nittany Lion"image="https://storage.googleapis.com/gopsusports-prod/2024/07/05/FCoLZQRnxWFLGH1fTKecLdlVhe1EJazLoYsBeVPN.jpg"info="Penn State is awesome!!"></my-card>
-  <my-card title="The Nittany Lion"image="https://images.onwardstate.com/uploads/2024/08/Football-vs.-West-Virginia-Stutzman-07663-scaled.jpg"info="This is the best mascot in the world! Click the button below to access HAX!"></my-card>
-  <my-card title="The Nittany Lion"image="https://psu-gatsby-files-prod.s3.amazonaws.com/s3fs-public/KSU_8027.jpg"info="idk just click the button"></my-card>
+  <h1>My Cards</h1>
+  <button>toggle</button>
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      const card = document .querySelector('my-card');
+      card.fancy = !card.fancy;
+    });
+  </script>
+  <my-card 
+    album ="Isolation" 
+    image="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/de/e1/8b/dee18be4-276a-1e90-7aec-883c91a5a43e/17UM1IM08185.rgb.jpg/1200x1200bb.jpg"
+    facts="Favorite Songs: Nuestro Planeta, Just A Stranger, Your Teeth In My Neck, and Tyrant">
+    <p>
+      <strong>Isolation</strong> is a genre-blending album that fuses R&B, soul, funk, and psychedelic pop. 
+     It showcases her dreamy vocals and introspective lyrics, touching on themes of love, independence, and self-discovery.   
+    </p>
+    </my-card>
+  <my-card 
+    album="Red Moon in Venus" 
+    image="https://i.scdn.co/image/ab67616d0000b27381fccd758776d16b87721b17"
+    facts="Favorite Songs: Moonlight, I Wish You Roses, Endlessly.">
+    <p>
+      <strong>Red Moon in Venus</strong> is a celestial and romantic album blending R&B, soul, and neo-psychedelia. 
+      It’s intimate and emotional, focusing on love, healing, and feminine energy. 
+    </p>
+  </my-card>
+  <my-card 
+    album="Sin Miedo"
+    image="https://www.theodysseyonline.com/media-library/image.jpg?id=24845450&width=980"
+    facts="Favorite Songs: Telepatía, Fue Mejor, Quiero Sentirme Bien.">
+    <p>
+      <strong>Sin Miedo</strong> is Kali Uchis' first Spanish-language album, blending bolero and Latin R&B with her signature dreamy aesthetic. 
+      The album explores themes of love, heartbreak, and self-empowerment through sultry melodies and hypnotic rhythms. 
+    </p>
+  </my-card>
+  <my-card 
+    album="Por Vida"
+    image="https://i.scdn.co/image/ab67616d0000b273dbc47f8bae404ce15ffd055e"
+    facts="Favorite Songs: Melting, Know What I Want, Rush.">
+    <p>
+      <strong>Por Vida</strong> is Kali Uchis' debut EP, setting the stage for her signature dreamy, genre-blending sound. 
+      With influences from R&B, soul, and lo-fi pop, the project features lush production and nostalgic melodies. 
+    </p>
+  </my-card>
+  <my-card 
+    album="Orquideas"
+    image="https://i.guim.co.uk/img/media/cf31479e721300d8d50fd6f55cb8c57f2e98be52/0_1142_3648_2189/master/3648.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=14e5a77beb72e12cf255fa268c5efe2e"
+    facts="Favorite Songs: No Hay Ley, Me Pongo Loca, Te Mata.">
+    <p>
+      <strong>Orquideas</strong> is a vibrant and energetic album that embraces Latin rhythms like reggaetón and cumbia while staying true to her signature style. 
+      It celebrates confidence, joy, and cultural roots through dynamic production and catchy melodies.
+    </p>
+  </my-card>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
