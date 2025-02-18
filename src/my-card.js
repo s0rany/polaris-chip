@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "@haxtheweb/meme-maker/meme-maker.js";
 
 /**
  * Now it's your turn. Here's what we need to try and do:
@@ -87,6 +88,11 @@ export class MyCard extends LitElement {
       .bkg2 {
         background-color: pink;
       }
+      meme-maker{
+        img{
+          width: 20%;
+        }
+      }
       @media (min-width: 500px) and (max-width: 800px) {
         .button {
           display: inline;
@@ -106,10 +112,15 @@ export class MyCard extends LitElement {
 
   render() {
     return html`
-      <div>${this.title}</div>
       <div id="cardlist">
         <div class="card">
-          <img class="imagep" src=${this.image} alt="Album Cover" width ="350" height ="350">
+        <div>${this.title}</div>
+          <meme-maker
+            alt="Up your meme game with hax and allow for more accessible memes"
+            image-url="https://haxtheweb.org/files/giphy.gif"
+            bottom-text="HTML is anything"
+            top-text="HAX is html">
+          </meme-maker>
           <div class="card-text">
             <h3 class="album">${this.album}</h3>
             <slot></slot>
@@ -130,7 +141,9 @@ export class MyCard extends LitElement {
     `;
   }
   
-  //this is for opening and closing the fancy state with the details
+  //this is for opening and closing the fancy state with the details                 <img class="imagep" src=${this.image} alt="Album Cover" width ="350" height ="350">
+    
+
     openChanged(e) {
       console.log(e.newState);
       if (e.newState === "open") {
